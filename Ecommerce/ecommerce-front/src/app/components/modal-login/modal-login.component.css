@@ -1,0 +1,56 @@
+.login-container{
+  padding: 5%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+}
+.login-close{
+  position: absolute;
+  top: 0;
+  right: 1%;
+  font-size: 20px;
+}
+.login-element-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-header h3{
+  color: #333;
+  margin-right: 40px;
+}
+
+.login-btn {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login-container form{
+  padding: 10% 10% 0% 10%;
+}
+
+.login-sign-up-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-error-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #981818;
+}
+
+.login-sign-up-text span{
+  cursor: pointer;
+  color: #ed5007;
+}
+
+

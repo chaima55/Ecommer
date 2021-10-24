@@ -1,0 +1,26 @@
+<header class="header-desktop">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="header-wrap">
+        <app-search></app-search>
+        <div class="navbar-cont">
+          <div class="cart-area d-n">
+            <i (click)="navigateToCardPage()" class="fa fa-shopping-cart" aria-hidden="true"
+               style="cursor: pointer;margin-right: 10px"></i>
+            <div class="total">{{ totalPrice | currency:'TND ' }}<span> {{nbShop}}</span></div>
+
+          </div>
+          <div style="margin: 0 40px">
+            <i (click)="navigateToCardPage()" class="fa fa-user" aria-hidden="true"
+               style="margin-right: 10px; font-size: 18px"></i>
+            <!--<i *ngIf="!isLogin()" (click)="navigateToCardPage()" class="fa fa-user" aria-hidden="true"
+               style="color: green; margin-right: 10px; font-size: 18px"></i>-->
+            <span *ngIf="isLogin()" (click)="loginHandler()" style="cursor: pointer;color: white">Login</span>
+            <span *ngIf="!isLogin()" (click)="logoutHandler()" style="cursor: pointer;color: white">Logout</span>
+          </div>
+        </div>
+      </div>
+      <div class="account-wrap"></div>
+    </div>
+  </div>
+</header>

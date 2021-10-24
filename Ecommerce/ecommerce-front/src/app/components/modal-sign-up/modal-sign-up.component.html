@@ -1,0 +1,36 @@
+<div class="login-container">
+  <div class="login-close">
+    <i class="fa fa-window-close" aria-hidden="true" (click)="activeModal.dismiss('Cross click')"
+       style="cursor: pointer;"></i>
+  </div>
+  <div class="login-header">
+    <h3>Login Form</h3>
+  </div>
+  <form>
+    <div class="form-group">
+      <input [(ngModel)]="user.firstName" type="text" class="form-control" placeholder="Your Firstname *"
+             name="firstname"/>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="user.lastName" type="text" class="form-control" placeholder="Your Lastname *"
+             name="lastname"/>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="user.email" type="text" class="form-control" placeholder="Your Email *" name="email"/>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="user.password" type="password" class="form-control" placeholder="Your Password *"
+             name="password"/>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="user.phoneNumber" type="text" class="form-control" placeholder="Your Phone Number *"
+             name="phoneNumber"/>
+    </div>
+  </form>
+  <div *ngIf="showErrorMessage" class="login-error-text">
+    <p>*Invalid email or password</p>
+  </div>
+  <div class="login-btn">
+    <button type="button" class="btn btn-outline-info" [disabled]="!user.isValid()" (click)="save()">Save</button>
+  </div>
+</div>

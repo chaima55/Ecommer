@@ -1,0 +1,25 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <!--        loop over the collection of products-->
+        <div *ngFor="let prod of products" class="col-md-3">
+          <div class="product-box">
+            <img src="{{ prod.imageUrl }}" class="img-responsive">
+            <h1>{{ prod.name }}</h1>
+            <div class="price">{{prod.unitPrice}}</div>
+            <button type="button" class="btn btn-danger" (click)="deleteFormCard(prod.id)">Delete</button>
+          </div>
+        </div>
+        <div *ngIf="products?.length===0" class="alert alert-warning col-md-12" role="alert">
+          No Products in your cart
+        </div>
+      </div>
+      <div *ngIf="products?.length!==0" class="row" style="display: flex">
+        <button type="button" (click)="buyHandler()" class="btn btn-success" style="margin: auto">Buy Now</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
